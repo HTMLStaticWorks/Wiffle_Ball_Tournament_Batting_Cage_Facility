@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leagues | WifflePro Sports Facility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { primary: '#2563EB', secondary: '#F97316' },
+                    fontFamily: { sports: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-body transition-colors duration-300">
+
+    <!-- Header (Premium Pill Design) -->
+    <header id="main-header" class="fixed w-full z-50 bg-transparent transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <nav class="flex items-center justify-between h-24">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0">
+                    <span class="text-3xl font-sports font-bold tracking-tighter">
+                        <span class="text-primary">WIFFLE</span><span class="text-secondary">PRO</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation (Pill Shape) -->
+                <div class="hidden xl:flex items-center space-x-6 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full">
+                    <a href="index.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Home</a>
+                    <a href="home2.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Premium</a>
+                    <a href="leagues.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors text-primary border-b border-primary">Leagues</a>
+                    <a href="tournaments.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Tournaments</a>
+                    <a href="batting-cages.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Cages</a>
+                    <a href="party-packages.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Parties</a>
+                    <a href="pricing.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Pricing</a>
+                    <a href="gallery.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Gallery</a>
+                    <a href="contact.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Actions -->
+                <div class="hidden xl:flex items-center space-x-3">
+                    <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                        <i data-lucide="moon" class="w-4 h-4 text-white"></i>
+                    </button>
+                    <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                        <span class="text-[10px] font-bold text-white uppercase">RTL</span>
+                    </button>
+                    <a href="leagues.html" class="bg-secondary hover:bg-orange-600 text-white px-5 py-2 rounded-full font-bold text-[10px] transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">
+                        Register Team
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="xl:hidden p-2 text-slate-600 dark:text-slate-300">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 top-20 bg-white dark:bg-slate-900 z-40 flex-col p-6 space-y-4 overflow-y-auto border-t border-slate-100 dark:border-slate-800 animate-fade-in">
+            <a href="index.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Home</a>
+            <a href="home2.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Premium</a>
+            <a href="leagues.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2 text-primary">Leagues</a>
+            <a href="tournaments.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Tournaments</a>
+            <a href="batting-cages.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Batting Cages</a>
+            <a href="party-packages.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Party Packages</a>
+            <a href="pricing.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Pricing</a>
+            <a href="gallery.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Gallery</a>
+            <a href="contact.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Contact</a>
+            
+            <div class="flex flex-col space-y-3 pt-4">
+                <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-xl font-bold">Book a Cage</a>
+                <a href="leagues.html" class="border-2 border-secondary text-secondary text-center py-4 rounded-xl font-bold">Register Team</a>
+                <div class="flex justify-center gap-4 pt-4">
+                    <button class="theme-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl flex-1 flex justify-center">
+                        <i data-lucide="moon" class="w-6 h-6"></i>
+                    </button>
+                    <button class="rtl-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl flex-1 font-bold">
+                        RTL
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative h-[60vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="assets/images/hero.png" class="w-full h-full object-cover" alt="Leagues">
+                <div class="absolute inset-0 bg-slate-900/80"></div>
+            </div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h1 class="text-4xl sm:text-7xl font-sports text-white mb-6">SEASONAL <span class="text-primary">LEAGUES</span></h1>
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl">Join the community, build your team, and compete for the championship in our organized seasonal leagues.</p>
+            </div>
+        </section>
+
+        <!-- Youth Leagues -->
+        <section class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+                    <div>
+                        <span class="text-primary font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">Ages 8-16</span>
+                        <h2 class="text-3xl sm:text-5xl font-sports mb-6">YOUTH <span class="text-secondary">DEVELOPMENT</span> LEAGUES</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg mb-8">
+                            Our youth leagues focus on skill development, sportsmanship, and having fun. With professional coaching available and modified rules for younger players.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl">
+                                <h4 class="font-bold text-primary mb-1">Rookie Div</h4>
+                                <p class="text-sm text-slate-500">Ages 8-10</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl">
+                                <h4 class="font-bold text-primary mb-1">Pro Div</h4>
+                                <p class="text-sm text-slate-500">Ages 11-13</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl">
+                                <h4 class="font-bold text-primary mb-1">Elite Div</h4>
+                                <p class="text-sm text-slate-500">Ages 14-16</p>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl">
+                                <h4 class="font-bold text-primary mb-1">All-Star</h4>
+                                <p class="text-sm text-slate-500">Travel Teams</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center lg:justify-start">
+                            <a href="#" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-xl font-bold text-center">View Youth Schedule</a>
+                        </div>
+                    </div>
+                    <div class="relative mt-12 lg:mt-0">
+                        <img src="assets/images/hero.png" class="rounded-[30px] sm:rounded-[40px] shadow-2xl w-full" alt="Youth League">
+                        <div class="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-secondary text-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-xl">
+                            <div class="text-2xl sm:text-4xl font-sports">NEW</div>
+                            <div class="text-[10px] sm:text-xs font-bold uppercase">Summer Camp 2026</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adult Leagues -->
+        <section class="py-16 sm:py-24 bg-slate-50 dark:bg-slate-800">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+                    <div class="order-2 lg:order-1 mt-12 lg:mt-0">
+                        <img src="assets/images/tournament.png" class="rounded-[30px] sm:rounded-[40px] shadow-2xl w-full" alt="Adult League">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span class="text-secondary font-bold uppercase tracking-widest text-xs sm:text-sm mb-2 block">Ages 18+</span>
+                        <h2 class="text-3xl sm:text-5xl font-sports mb-6">ADULT <span class="text-primary">COMPETITIVE</span> LEAGUES</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg mb-8">
+                            The most intense wiffle ball competition in the region. Fast-pitch, full-speed action with official stat tracking and live scoreboards.
+                        </p>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check" class="text-primary"></i>
+                                <span>$500 Entry per Team</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check" class="text-primary"></i>
+                                <span>12 Game Regular Season</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i data-lucide="check" class="text-primary"></i>
+                                <span>Double Elimination Playoffs</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="bg-secondary text-white px-8 py-4 rounded-xl font-bold inline-block">Register Your Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seasonal Schedules -->
+        <section class="py-16 sm:py-24 bg-white dark:bg-slate-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-sports mb-4">SEASONAL <span class="text-primary">SCHEDULE</span></h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto text-sm sm:text-base">Upcoming matches across all divisions. Check back daily for updates.</p>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-white">
+                                <th class="p-4 font-sports text-xl">DATE</th>
+                                <th class="p-4 font-sports text-xl">TIME</th>
+                                <th class="p-4 font-sports text-xl">DIVISION</th>
+                                <th class="p-4 font-sports text-xl">MATCHUP</th>
+                                <th class="p-4 font-sports text-xl">FIELD</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600 dark:text-slate-400">
+                            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <td class="p-4 font-bold">MON, JUNE 1</td>
+                                <td class="p-4">6:00 PM</td>
+                                <td class="p-4 text-primary font-bold">ADULT OPEN</td>
+                                <td class="p-4">TITANS vs RAIDERS</td>
+                                <td class="p-4">FIELD 1</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <td class="p-4 font-bold">MON, JUNE 1</td>
+                                <td class="p-4">7:15 PM</td>
+                                <td class="p-4 text-primary font-bold">ADULT OPEN</td>
+                                <td class="p-4">COBRAS vs EAGLES</td>
+                                <td class="p-4">FIELD 2</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                <td class="p-4 font-bold">TUE, JUNE 2</td>
+                                <td class="p-4">5:30 PM</td>
+                                <td class="p-4 text-secondary font-bold">YOUTH PRO</td>
+                                <td class="p-4">SHARKS vs LIONS</td>
+                                <td class="p-4">FIELD 1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Process -->
+        <section class="py-16 sm:py-24 bg-slate-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-5xl font-sports mb-4">HOW TO <span class="text-secondary">REGISTER</span></h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-3xl font-sports mx-auto mb-6">1</div>
+                        <h4 class="text-xl font-bold mb-2">PICK A LEAGUE</h4>
+                        <p class="text-slate-500 text-sm">Choose the division that fits your skill level.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-3xl font-sports mx-auto mb-6">2</div>
+                        <h4 class="text-xl font-bold mb-2">FORM A TEAM</h4>
+                        <p class="text-slate-500 text-sm">Gather your players (min 4, max 8).</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-3xl font-sports mx-auto mb-6">3</div>
+                        <h4 class="text-xl font-bold mb-2">FILL FORM</h4>
+                        <p class="text-slate-500 text-sm">Submit your roster and team name online.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-3xl font-sports mx-auto mb-6">4</div>
+                        <h4 class="text-xl font-bold mb-2">PAY & PLAY</h4>
+                        <p class="text-slate-500 text-sm">Complete payment and prepare for opening day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 bg-secondary">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-6xl font-sports text-white mb-6">READY FOR THE BIG LEAGUES?</h2>
+                <a href="#" class="bg-white text-secondary px-12 py-5 rounded-full font-bold text-xl inline-block hover:bg-slate-100 transition-colors">Start Your Registration</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-white py-12 border-t border-white/5">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2026 WifflePro Facility. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
