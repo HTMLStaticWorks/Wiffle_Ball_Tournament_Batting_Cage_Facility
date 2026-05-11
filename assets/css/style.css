@@ -28,7 +28,13 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, .font-sports {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-sports {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.05em;
 }
@@ -40,9 +46,17 @@ h1, h2, h3, h4, h5, h6, .font-sports {
 
 /* Custom Animations */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .animate-float {
@@ -65,8 +79,15 @@ h1, h2, h3, h4, h5, h6, .font-sports {
 
 /* Marquee Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in {
@@ -99,8 +120,13 @@ header nav a.text-primary::after {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .animate-marquee {
@@ -132,4 +158,31 @@ header nav a.text-primary::after {
     background: linear-gradient(to right, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Scrolled Header Contrast (Light Mode) */
+#main-header.bg-white\/90 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+#main-header.bg-white\/90 nav a:not(.bg-primary):not(.bg-secondary),
+#main-header.bg-white\/90 #theme-toggle i,
+#main-header.bg-white\/90 #rtl-toggle span,
+#main-header.bg-white\/90 #menu-btn i {
+    color: #0f172a !important;
+}
+
+/* Scrolled Navigation Pill and Buttons (Light Mode) */
+#main-header.bg-white\/90 .xl\:flex.bg-white\/5,
+#main-header.bg-white\/90 .xl\:flex.items-center.gap-3 button,
+#main-header.bg-white\/90 .xl\:hidden.flex.items-center.gap-2 button {
+    background-color: rgba(15, 23, 42, 0.05) !important;
+    border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Ensure mobile menu icons are visible when header is white */
+#main-header.bg-white\/90 .xl\:hidden button i {
+    color: #0f172a !important;
 }

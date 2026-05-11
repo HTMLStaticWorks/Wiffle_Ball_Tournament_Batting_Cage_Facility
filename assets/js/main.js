@@ -2,10 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Active Link Highlighting
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
-    
+
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href === currentPath) {
+            // Skip buttons that have a background color to avoid contrast issues
+            const hasBg = Array.from(link.classList).some(cls => cls.startsWith('bg-'));
+            if (hasBg) return;
+
             // Check if it's a desktop link
             if (link.classList.contains('text-[10px]')) {
                 link.classList.add('text-primary', 'border-b', 'border-primary');
@@ -81,14 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('close-menu');
     const mobileMenu = document.getElementById('mobile-menu');
     const body = document.body;
-    
+
     if (menuBtn && mobileMenu) {
         const menuIcon = menuBtn.querySelector('i');
 
         const toggleMenu = () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
-            
+
             if (mobileMenu.classList.contains('hidden')) {
                 menuIcon.setAttribute('data-lucide', 'menu');
                 body.style.overflow = '';
@@ -134,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "CAGE KINGS 10 - 2 FASTBALL FLIERS",
             "DIAMOND DUSTERS 5 - 9 CURVEBALL CREW"
         ];
-        
+
         // Duplicate for seamless loop
         const content = scores.join(' • ') + ' • ';
         tickerContent.innerHTML = `<span class="px-4">${content}</span><span class="px-4">${content}</span>`;
@@ -144,14 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / 100;
+        if (isNaN(target)) return;
+
+        // Initialize to 0 to ensure it's not "missing" during start
+        counter.innerText = '0';
 
         const updateCount = () => {
-            const currentCount = +counter.innerText;
+            const currentCount = parseInt(counter.innerText) || 0;
             if (currentCount < target) {
-                counter.innerText = Math.ceil(currentCount + increment);
-                setTimeout(updateCount, 10);
+                // Adjust increment speed based on target
+                const increment = Math.max(1, Math.ceil(target / 40));
+                const nextCount = Math.min(currentCount + increment, target);
+                counter.innerText = nextCount;
+                setTimeout(updateCount, 30);
             } else {
                 counter.innerText = target;
             }
@@ -159,10 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const counterObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                updateCount();
+                setTimeout(updateCount, 100);
                 counterObserver.unobserve(counter);
             }
-        });
+        }, { threshold: 0.1 });
         counterObserver.observe(counter);
     });
 
@@ -170,11 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainHeader = document.getElementById('main-header');
     if (mainHeader) {
         window.addEventListener('scroll', () => {
+            const isDark = htmlElement.classList.contains('dark');
             if (window.scrollY > 50) {
-                mainHeader.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
-                mainHeader.classList.remove('bg-transparent');
+                if (isDark) {
+                    mainHeader.classList.add('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
+                    mainHeader.classList.remove('bg-transparent', 'bg-white/90', 'border-slate-200');
+                } else {
+                    mainHeader.classList.add('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-slate-200');
+                    mainHeader.classList.remove('bg-transparent', 'bg-slate-900/90', 'border-white/10');
+                }
             } else {
-                mainHeader.classList.remove('bg-slate-900/90', 'backdrop-blur-md', 'border-b', 'border-white/10');
+                mainHeader.classList.remove('bg-slate-900/90', 'bg-white/90', 'backdrop-blur-md', 'border-b', 'border-white/10', 'border-slate-200');
                 mainHeader.classList.add('bg-transparent');
             }
         });
@@ -229,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toggle.addEventListener('click', () => {
             const content = toggle.nextElementSibling;
             const icon = toggle.querySelector('i');
-            
+
             // Close other items
             document.querySelectorAll('.faq-content').forEach(item => {
                 if (item !== content) {
