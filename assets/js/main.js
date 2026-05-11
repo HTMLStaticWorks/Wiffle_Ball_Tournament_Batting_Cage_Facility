@@ -146,4 +146,74 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Pricing Category Dropdown Logic
+    const categoryBtn = document.getElementById('category-dropdown-btn');
+    const categoryMenu = document.getElementById('category-dropdown-menu');
+    const categoryOptions = document.querySelectorAll('.category-option');
+    const selectedCategoryText = document.getElementById('selected-category');
+    const pricingCards = document.querySelectorAll('.pricing-card');
+
+    if (categoryBtn && categoryMenu) {
+        categoryBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            categoryMenu.classList.toggle('hidden');
+            categoryBtn.querySelector('i').classList.toggle('rotate-180');
+        });
+
+        categoryOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const category = option.getAttribute('data-category');
+                selectedCategoryText.innerText = option.innerText;
+                categoryMenu.classList.add('hidden');
+                categoryBtn.querySelector('i').classList.remove('rotate-180');
+
+                // Filtering Logic
+                pricingCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.classList.remove('hidden');
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', () => {
+            categoryMenu.classList.add('hidden');
+            categoryBtn.querySelector('i').classList.remove('rotate-180');
+        });
+    }
+
+    // FAQ Accordion Logic
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const icon = toggle.querySelector('i');
+            
+            // Close other items
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if (item !== content) {
+                    item.classList.add('hidden');
+                    item.previousElementSibling.querySelector('i').classList.remove('rotate-45');
+                    item.previousElementSibling.querySelector('i').setAttribute('data-lucide', 'plus');
+                }
+            });
+
+            // Toggle current item
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('rotate-45');
+            } else {
+                icon.classList.add('rotate-45');
+            }
+            lucide.createIcons();
+        });
+    });
 });
