@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
-    <title>WifflePro | Ultimate Wiffle Ball & Batting Cage Facility</title>
+    <title>STRIKE ZONE | Ultimate Wiffle Ball & Batting Cage Facility</title>
     <meta name="description" content="Premium Wiffle Ball leagues, tournaments, and professional batting cage rentals. Join the competition today!">
     
     <!-- Tailwind CSS -->
@@ -46,7 +46,7 @@
                 <!-- Logo -->
                 <a href="index.html" class="flex-shrink-0">
                     <span class="text-3xl font-sports font-bold tracking-tighter">
-                        <span class="text-primary">WIFFLE</span><span class="text-secondary">PRO</span>
+                        <span class="text-primary">STRIKE</span><span class="text-secondary">ZONE</span>
                     </span>
                 </a>
 
@@ -73,7 +73,7 @@
                     </button>
                     <a href="batting-cages.html" class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-full font-bold text-[10px] transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">
                         Book a Cage
-                    </a>
+                    </a> <a href="signup.html" class="bg-secondary hover:bg-orange-600 text-white px-5 py-2 rounded-full font-bold text-[10px] transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -84,25 +84,32 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 top-20 bg-white dark:bg-slate-900 z-40 flex-col p-6 space-y-4 overflow-y-auto border-t border-slate-100 dark:border-slate-800 animate-fade-in">
-            <a href="index.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Home</a>
-            <a href="home2.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Premium</a>
-            <a href="leagues.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Leagues</a>
-            <a href="tournaments.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Tournaments</a>
-            <a href="batting-cages.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Batting Cages</a>
-            <a href="party-packages.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Party Packages</a>
-            <a href="pricing.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Pricing</a>
-            <a href="gallery.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Gallery</a>
-            <a href="contact.html" class="text-2xl font-sports border-b border-slate-50 dark:border-slate-800 pb-2">Contact</a>
+        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 bg-slate-950 z-[100] flex-col items-center justify-center p-8 space-y-8 overflow-y-auto">
+            <!-- Close Button for Mobile -->
+            <button id="close-menu" class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="flex flex-col items-center space-y-6">
+                <a href="index.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors text-primary">Home</a>
+                <a href="home2.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Premium</a>
+                <a href="leagues.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Leagues</a>
+                <a href="tournaments.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Tournaments</a>
+                <a href="batting-cages.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Cages</a>
+                <a href="party-packages.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Parties</a>
+                <a href="pricing.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Pricing</a>
+                <a href="gallery.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Gallery</a>
+                <a href="contact.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Contact</a>
+            </div>
             
-            <div class="flex flex-col space-y-3 pt-4">
-                <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-xl font-bold">Book a Cage</a>
-                <a href="leagues.html" class="border-2 border-secondary text-secondary text-center py-4 rounded-xl font-bold">Register Team</a>
+            <div class="w-full max-w-xs flex flex-col space-y-4 pt-8 border-t border-white/10">
+                <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-full font-bold text-[12px] uppercase tracking-widest shadow-lg shadow-primary/20">Book a Cage</a>
+                <a href="leagues.html" class="border-2 border-secondary text-secondary text-center py-4 rounded-full font-bold text-[12px] uppercase tracking-widest hover:bg-secondary hover:text-white transition-all">Register Team</a> <a href="signup.html" class="bg-white/10 border border-white/20 text-white text-center py-4 rounded-full font-bold text-[12px] uppercase tracking-widest hover:bg-white/20 transition-all">Sign Up</a>
                 <div class="flex justify-center gap-4 pt-4">
-                    <button class="theme-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl flex-1 flex justify-center">
-                        <i data-lucide="moon" class="w-6 h-6"></i>
+                    <button class="theme-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                        <i data-lucide="moon" class="w-5 h-5"></i>
                     </button>
-                    <button class="rtl-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl flex-1 font-bold">
+                    <button class="rtl-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center font-bold text-[12px] hover:bg-white/10 transition-all">
                         RTL
                     </button>
                 </div>
@@ -115,7 +122,7 @@
         <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
             <!-- Background Image with Overlay -->
             <div class="absolute inset-0 z-0">
-                <img src="assets/images/hero.png" alt="Wiffle Ball Action" class="w-full h-full object-cover">
+                <img src="assets/images/hero-main.png" alt="Wiffle Ball Action" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
             </div>
 
@@ -151,15 +158,15 @@
                     <!-- Animated Stats -->
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16">
                         <div>
-                            <div class="text-3xl sm:text-4xl font-sports text-primary"><span class="counter" data-target="24">0</span>/7</div>
+                            <div class="text-3xl sm:text-4xl font-sports text-primary"><span class="counter" data-target="24">24</span>/7</div>
                             <div class="text-slate-400 text-[10px] sm:text-sm uppercase font-bold tracking-widest">Open Facility</div>
                         </div>
                         <div>
-                            <div class="text-3xl sm:text-4xl font-sports text-secondary"><span class="counter" data-target="150">0</span>+</div>
+                            <div class="text-3xl sm:text-4xl font-sports text-secondary"><span class="counter" data-target="150">150</span>+</div>
                             <div class="text-slate-400 text-[10px] sm:text-sm uppercase font-bold tracking-widest">Active Teams</div>
                         </div>
                         <div class="col-span-2 sm:col-span-1">
-                            <div class="text-3xl sm:text-4xl font-sports text-white"><span class="counter" data-target="12">0</span></div>
+                            <div class="text-3xl sm:text-4xl font-sports text-white"><span class="counter" data-target="12">12</span></div>
                             <div class="text-slate-400 text-[10px] sm:text-sm uppercase font-bold tracking-widest">Pro Cages</div>
                         </div>
                     </div>
@@ -182,20 +189,20 @@
                         <h2 class="text-3xl sm:text-5xl font-sports text-slate-900 dark:text-white mb-4">UPCOMING <span class="text-primary">TOURNAMENTS</span></h2>
                         <p class="text-slate-600 dark:text-slate-400 max-w-xl">Compete against the best and claim your spot on the hall of fame. Huge prizes and ultimate bragging rights await.</p>
                     </div>
-                    <a href="tournaments.html" class="hidden md:flex items-center text-primary font-bold hover:text-secondary transition-colors group">
+                    <a href="tournaments.html" class="flex items-center text-primary font-bold hover:text-secondary transition-colors group text-sm sm:text-base">
                         VIEW ALL TOURNAMENTS
                         <i data-lucide="chevron-right" class="ml-1 w-5 h-5 transform group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Tournament Card 1 -->
-                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col h-full">
                         <div class="h-64 overflow-hidden relative">
                             <img src="assets/images/tournament.png" alt="Summer Slam" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             <div class="absolute top-4 left-4 bg-secondary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Registration Open</div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center text-primary font-bold text-sm uppercase mb-3">
                                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
                                 JUNE 15-17, 2026
@@ -211,19 +218,19 @@
                                     $5,000 PRIZE
                                 </div>
                             </div>
-                            <a href="tournaments.html" class="block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
+                            <a href="tournaments.html" class="mt-auto block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
                                 REGISTER NOW
                             </a>
                         </div>
                     </div>
 
                     <!-- Tournament Card 2 -->
-                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col h-full">
                         <div class="h-64 overflow-hidden relative">
-                            <img src="assets/images/hero.png" alt="Midnight Madness" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <img src="assets/images/midnight_madness.png" alt="Midnight Madness" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             <div class="absolute top-4 left-4 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase">New Event</div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center text-primary font-bold text-sm uppercase mb-3">
                                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
                                 JULY 04, 2026
@@ -239,19 +246,19 @@
                                     CASH PRIZES
                                 </div>
                             </div>
-                            <a href="tournaments.html" class="block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
+                            <a href="tournaments.html" class="mt-auto block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
                                 REGISTER NOW
                             </a>
                         </div>
                     </div>
 
                     <!-- Tournament Card 3 -->
-                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="group relative overflow-hidden rounded-3xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col h-full sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto w-full">
                         <div class="h-64 overflow-hidden relative">
                             <img src="assets/images/batting-cage.png" alt="Youth Cup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             <div class="absolute top-4 left-4 bg-slate-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Youth Division</div>
                         </div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow">
                             <div class="flex items-center text-primary font-bold text-sm uppercase mb-3">
                                 <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
                                 JULY 20, 2026
@@ -267,7 +274,7 @@
                                     EQUIPMENT PRIZES
                                 </div>
                             </div>
-                            <a href="tournaments.html" class="block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
+                            <a href="tournaments.html" class="mt-auto block w-full text-center bg-slate-900 dark:bg-white dark:text-slate-900 text-white py-4 rounded-xl font-bold group-hover:bg-primary group-hover:text-white transition-colors">
                                 REGISTER NOW
                             </a>
                         </div>
@@ -283,34 +290,34 @@
             </div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <div>
-                        <h2 class="text-5xl font-sports mb-6">JOIN THE <span class="text-secondary">PRO LEAGUES</span></h2>
-                        <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                    <div class="text-center lg:text-left">
+                        <h2 class="text-4xl sm:text-5xl font-sports mb-6">JOIN THE <span class="text-secondary">PRO LEAGUES</span></h2>
+                        <p class="text-slate-400 text-lg mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             Whether you're a seasoned pro or just starting out, we have a league for you. Our seasonal leagues feature official umpiring, professional stat tracking, and live-streamed playoffs.
                         </p>
                         
-                        <div class="space-y-6 mb-10">
-                            <div class="flex items-start space-x-4">
+                        <div class="space-y-6 mb-10 flex flex-col items-center lg:items-start">
+                            <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
                                 <div class="bg-primary/20 p-3 rounded-xl border border-primary/30">
                                     <i data-lucide="check-circle" class="w-6 h-6 text-primary"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-bold mb-1">Official Stat Tracking</h4>
-                                    <p class="text-slate-600">Every hit, every run, every strikeout recorded in our system.</p>
+                                    <p class="text-slate-500">Every hit, every run, every strikeout recorded in our system.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start space-x-4">
+                            <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
                                 <div class="bg-secondary/20 p-3 rounded-xl border border-secondary/30">
                                     <i data-lucide="tv" class="w-6 h-6 text-secondary"></i>
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-bold mb-1">Live Game Streaming</h4>
-                                    <p class="text-slate-600">Friends and family can watch your games from anywhere.</p>
+                                    <p class="text-slate-500">Friends and family can watch your games from anywhere.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                             <a href="leagues.html" class="bg-secondary hover:bg-orange-600 text-white text-center py-4 px-8 rounded-xl font-bold transition-colors">Register as Team</a>
                             <a href="leagues.html" class="bg-white/10 hover:bg-white/20 text-white text-center py-4 px-8 rounded-xl font-bold border border-white/20 transition-colors">Join as Free Agent</a>
                         </div>
@@ -320,7 +327,7 @@
                         <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
                         <div class="relative grid grid-cols-2 gap-4">
                             <div class="space-y-4">
-                                <img src="assets/images/hero.png" class="rounded-3xl h-64 w-full object-cover" alt="League Action">
+                                <img src="assets/images/adult_wiffle_competitive.png" class="rounded-3xl h-64 w-full object-cover" alt="League Action">
                                 <div class="bg-slate-800 p-6 rounded-3xl border border-slate-700">
                                     <div class="text-3xl font-sports text-primary">400+</div>
                                     <div class="text-slate-400 text-sm font-bold uppercase">Players Enrolled</div>
@@ -349,7 +356,7 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="relative rounded-3xl overflow-hidden h-[500px]">
-                        <img src="assets/images/batting-cage.png" alt="Batting Cage" class="w-full h-full object-cover">
+                        <img src="assets/images/high_tech_cage_interior.png" alt="Batting Cage" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
                         <div class="absolute bottom-8 left-8 right-8">
                             <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-center text-white gap-4">
@@ -495,8 +502,8 @@
             </div>
             
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300 flex flex-col h-full">
                         <div class="flex text-secondary mb-4">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -505,12 +512,12 @@
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
                         "The atmosphere here is electric. Our team has been playing in the summer league for 3 years and it's the highlight of our week. The facilities are top-notch!"
-                        <div class="mt-6 not-italic font-bold text-white flex items-center">
+                        <div class="mt-auto pt-6 not-italic font-bold text-white flex items-center">
                             <div class="w-10 h-10 bg-primary rounded-full mr-3 flex items-center justify-center">JD</div>
                             Jason Davis, Titans Captain
                         </div>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300 flex flex-col h-full">
                         <div class="flex text-secondary mb-4">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -519,12 +526,12 @@
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
                         "Hosted my son's 10th birthday here and it was flawless. The staff took care of everything and the kids had a blast in the cages. Highly recommend!"
-                        <div class="mt-6 not-italic font-bold text-white flex items-center">
+                        <div class="mt-auto pt-6 not-italic font-bold text-white flex items-center">
                             <div class="w-10 h-10 bg-secondary rounded-full mr-3 flex items-center justify-center">SM</div>
                             Sarah Miller, Parent
                         </div>
                     </div>
-                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300">
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 italic text-slate-300 flex flex-col h-full sm:col-span-2 lg:col-span-1 sm:max-w-md sm:mx-auto w-full">
                         <div class="flex text-secondary mb-4">
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -533,7 +540,7 @@
                             <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         </div>
                         "The HitTrax data really helped me analyze my swing. I've seen a noticeable improvement in my exit velocity after just a few sessions in the cages."
-                        <div class="mt-6 not-italic font-bold text-white flex items-center">
+                        <div class="mt-auto pt-6 not-italic font-bold text-white flex items-center">
                             <div class="w-10 h-10 bg-slate-700 rounded-full mr-3 flex items-center justify-center">MR</div>
                             Mike Ross, Amateur Player
                         </div>
@@ -566,7 +573,7 @@
                 <div>
                     <a href="index.html" class="flex items-center space-x-2 mb-8">
                         <span class="text-3xl font-sports font-bold tracking-tighter">
-                            <span class="text-primary">WIFFLE</span><span class="text-secondary">PRO</span>
+                            <span class="text-primary">STRIKE</span><span class="text-secondary">ZONE</span>
                         </span>
                     </a>
                     <p class="text-slate-400 mb-8 leading-relaxed">
@@ -614,7 +621,7 @@
                         </li>
                         <li class="flex items-center space-x-3">
                             <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
-                            <span>info@wifflepro.com</span>
+                            <span>info@strikezone.com</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
@@ -635,7 +642,7 @@
             </div>
 
             <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
-                <p>© 2026 WifflePro Facility. All Rights Reserved.</p>
+                <p>© 2026 STRIKE ZONE. All Rights Reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-white">Privacy Policy</a>
                     <a href="#" class="hover:text-white">Terms of Service</a>
@@ -652,3 +659,6 @@
     </script>
 </body>
 </html>
+
+
+
