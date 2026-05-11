@@ -169,7 +169,9 @@ header nav a.text-primary::after {
 
 #main-header.bg-white\/90 nav a:not(.bg-primary):not(.bg-secondary),
 #main-header.bg-white\/90 #theme-toggle i,
+#main-header.bg-white\/90 .theme-toggle-mobile i,
 #main-header.bg-white\/90 #rtl-toggle span,
+#main-header.bg-white\/90 .rtl-toggle-mobile span,
 #main-header.bg-white\/90 #menu-btn i {
     color: #0f172a !important;
 }
