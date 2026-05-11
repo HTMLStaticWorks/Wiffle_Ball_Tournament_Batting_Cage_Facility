@@ -50,9 +50,9 @@
                 </a>
 
                 <!-- Desktop Navigation (Pill Shape) -->
-                <div class="hidden xl:flex items-center space-x-6 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full">
+                <div class="hidden xl:flex items-center gap-6 bg-white/5 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full">
                     <a href="index.html" class="font-bold text-[10px] uppercase tracking-widest text-white hover:text-primary transition-colors">Home</a>
-                    <a href="home2.html" class="font-bold text-[10px] uppercase tracking-widest hover:text-primary transition-colors text-primary border-b border-primary">Premium</a>
+                    <a href="home2.html" class="font-bold text-[10px] uppercase tracking-widest text-white hover:text-primary transition-colors">Premium</a>
                     <a href="leagues.html" class="font-bold text-[10px] uppercase tracking-widest text-white hover:text-primary transition-colors">Leagues</a>
                     <a href="tournaments.html" class="font-bold text-[10px] uppercase tracking-widest text-white hover:text-primary transition-colors">Tournaments</a>
                     <a href="batting-cages.html" class="font-bold text-[10px] uppercase tracking-widest text-white hover:text-primary transition-colors">Cages</a>
@@ -63,7 +63,7 @@
                 </div>
 
                 <!-- Actions -->
-                <div class="hidden xl:flex items-center space-x-3">
+                <div class="hidden xl:flex items-center gap-3">
                     <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
                         <i data-lucide="moon" class="w-4 h-4 text-white"></i>
                     </button>
@@ -71,45 +71,61 @@
                         <span class="text-[10px] font-bold text-white uppercase">RTL</span>
                     </button>
                     <a href="batting-cages.html" class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-full font-bold text-[10px] transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">
-                        Book Cage
-                    </a>
+                        Book a Cage
+                    </a> 
+                    <a href="signup.html" class="bg-secondary hover:bg-orange-600 text-white px-5 py-2 rounded-full font-bold text-[10px] transition-all transform hover:scale-105 shadow-lg whitespace-nowrap">Sign Up</a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="menu-btn" class="xl:hidden w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-                    <i data-lucide="menu" class="w-6 h-6 text-white"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
-        
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 bg-slate-950/95 backdrop-blur-2xl z-40 flex-col items-center justify-center p-8 space-y-8 animate-fade-in">
-            <div class="flex flex-col items-center space-y-6">
-                <a href="index.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Home</a>
-                <a href="home2.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors text-primary">Premium</a>
-                <a href="leagues.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Leagues</a>
-                <a href="tournaments.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Tournaments</a>
-                <a href="batting-cages.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Cages</a>
-                <a href="party-packages.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Parties</a>
-                <a href="pricing.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Pricing</a>
-                <a href="gallery.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Gallery</a>
-                <a href="contact.html" class="font-bold text-[12px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Contact</a>
-            </div>
-            
-            <div class="w-full max-w-xs flex flex-col space-y-4 pt-8 border-t border-white/10">
-                <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-full font-bold text-[10px] uppercase tracking-widest shadow-lg shadow-primary/20">Book a Cage</a>
-                <a href="leagues.html" class="border-2 border-secondary text-secondary text-center py-4 rounded-full font-bold text-[10px] uppercase tracking-widest hover:bg-secondary hover:text-white transition-all">Register Team</a>
-                <div class="flex justify-center gap-4 pt-4">
-                    <button class="theme-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
-                        <i data-lucide="moon" class="w-5 h-5"></i>
+                <!-- Mobile Actions -->
+                <div class="xl:hidden flex items-center gap-2">
+                    <button class="theme-toggle-mobile w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+                        <i data-lucide="moon" class="w-4 h-4 text-white"></i>
                     </button>
-                    <button class="rtl-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center font-bold text-[10px] hover:bg-white/10 transition-all">
-                        RTL
+                    <button class="rtl-toggle-mobile w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+                        <span class="text-[10px] font-bold text-white uppercase">RTL</span>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-btn" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
+                        <i data-lucide="menu" class="w-5 h-5 text-white"></i>
                     </button>
                 </div>
+            </nav>
+        </div>
+
+    </header>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 bg-slate-950 z-[100] flex-col items-center justify-center p-8 space-y-8 overflow-y-auto">
+        <!-- Close Button for Mobile -->
+        <button id="close-menu" class="absolute top-8 right-8 w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white">
+            <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+
+        <div class="flex flex-col items-center space-y-6">
+            <a href="index.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Home</a>
+            <a href="home2.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Premium</a>
+            <a href="leagues.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Leagues</a>
+            <a href="tournaments.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Tournaments</a>
+            <a href="batting-cages.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Cages</a>
+            <a href="party-packages.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Parties</a>
+            <a href="pricing.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Pricing</a>
+            <a href="gallery.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Gallery</a>
+            <a href="contact.html" class="font-bold text-[14px] uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+        
+        <div class="w-full max-w-xs flex flex-col space-y-4 pt-8 border-t border-white/10">
+            <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-full font-bold text-[12px] uppercase tracking-widest shadow-lg shadow-primary/20">Book a Cage</a>
+            <a href="signup.html" class="bg-white/10 border border-white/20 text-white text-center py-4 rounded-full font-bold text-[12px] uppercase tracking-widest hover:bg-white/20 transition-all">Sign Up</a>
+            <div class="flex justify-center gap-4 pt-4">
+                <button class="theme-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                    <i data-lucide="moon" class="w-5 h-5"></i>
+                </button>
+                <button class="rtl-toggle-mobile w-14 h-14 bg-white/5 border border-white/10 text-white rounded-full flex items-center justify-center font-bold text-[12px] hover:bg-white/10 transition-all">
+                    RTL
+                </button>
             </div>
         </div>
+    </div>
 
     <main>
         <!-- Cinematic Hero -->

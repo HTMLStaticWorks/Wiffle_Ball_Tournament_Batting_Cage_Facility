@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Active Link Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+    
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath) {
+            // Check if it's a desktop link
+            if (link.classList.contains('text-[10px]')) {
+                link.classList.add('text-primary', 'border-b', 'border-primary');
+                link.classList.remove('text-white');
+            }
+            // Check if it's a mobile link
+            if (link.classList.contains('text-[14px]') || link.classList.contains('text-[12px]')) {
+                link.classList.add('text-primary');
+                link.classList.remove('text-white');
+            }
+        }
+    });
+
     // Theme Toggle — uses Tailwind 'class' darkMode strategy
     const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle-mobile');
     const htmlElement = document.documentElement;
