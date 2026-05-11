@@ -1,18 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme Toggle
-    const themeToggle = document.getElementById('theme-toggle');
+    // Theme Toggle — uses Tailwind 'class' darkMode strategy
     const themeToggles = document.querySelectorAll('#theme-toggle, .theme-toggle-mobile');
     const htmlElement = document.documentElement;
-    
+
+    // Load saved theme
     const savedTheme = localStorage.getItem('theme') || 'light';
-    htmlElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') {
+        htmlElement.classList.add('dark');
+    } else {
+        htmlElement.classList.remove('dark');
+    }
     updateThemeIcon(savedTheme);
 
     themeToggles.forEach(btn => {
         btn.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            htmlElement.setAttribute('data-theme', newTheme);
+            const isDark = htmlElement.classList.contains('dark');
+            const newTheme = isDark ? 'light' : 'dark';
+            if (newTheme === 'dark') {
+                htmlElement.classList.add('dark');
+            } else {
+                htmlElement.classList.remove('dark');
+            }
             localStorage.setItem('theme', newTheme);
             updateThemeIcon(newTheme);
         });

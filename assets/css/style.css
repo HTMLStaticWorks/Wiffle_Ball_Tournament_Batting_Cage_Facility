@@ -7,20 +7,17 @@
 :root {
     --primary: #2563EB;
     --secondary: #F97316;
-}
-
-[data-theme='dark'] {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
-}
-
-[data-theme='light'] {
     --bg-primary: #ffffff;
     --bg-secondary: #f1f5f9;
     --text-primary: #0f172a;
     --text-secondary: #475569;
+}
+
+.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
 }
 
 body {
