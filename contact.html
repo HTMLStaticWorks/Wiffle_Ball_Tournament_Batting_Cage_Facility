@@ -83,10 +83,10 @@
                 <a href="batting-cages.html" class="bg-primary text-white text-center py-4 rounded-xl font-bold">Book a Cage</a>
                 <a href="leagues.html" class="border-2 border-secondary text-secondary text-center py-4 rounded-xl font-bold">Register Team</a>
                 <div class="flex justify-center gap-4 pt-4">
-                    <button class="theme-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl flex-1 flex justify-center">
+                    <button class="theme-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl flex-1 flex justify-center">
                         <i data-lucide="moon" class="w-6 h-6"></i>
                     </button>
-                    <button class="rtl-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 rounded-2xl flex-1 font-bold">
+                    <button class="rtl-toggle-mobile p-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white rounded-2xl flex-1 font-bold">
                         RTL
                     </button>
                 </div>
@@ -237,8 +237,90 @@
         </section>
     </main>
 
-    <footer class="bg-slate-950 py-12 text-center text-slate-500">
-        <p>© 2026 WifflePro. See you on the field.</p>
+    <footer class="bg-slate-950 text-white pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center space-x-2 mb-8">
+                        <span class="text-3xl font-sports font-bold tracking-tighter">
+                            <span class="text-primary">WIFFLE</span><span class="text-secondary">PRO</span>
+                        </span>
+                    </a>
+                    <p class="text-slate-400 mb-8 leading-relaxed">
+                        The nation's premier indoor Wiffle Ball facility. We provide professional-grade cages, competitive leagues, and unforgettable events.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.14 1 12 1 12s0 3.86.42 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.86 23 12 23 12s0-3.86-.42-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-sports mb-8">QUICK LINKS</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="leagues.html" class="hover:text-primary transition-colors">Leagues & Teams</a></li>
+                        <li><a href="tournaments.html" class="hover:text-primary transition-colors">Tournaments</a></li>
+                        <li><a href="batting-cages.html" class="hover:text-primary transition-colors">Batting Cages</a></li>
+                        <li><a href="party-packages.html" class="hover:text-primary transition-colors">Party Packages</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing & Memberships</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-xl font-sports mb-8">CONTACT US</h4>
+                    <ul class="space-y-6 text-slate-500">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary mt-1"></i>
+                            <span>123 Stadium Way, Sportsville, ST 12345</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary"></i>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary"></i>
+                            <span>info@wifflepro.com</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-primary"></i>
+                            <span>Open Daily: 9AM - 11PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-xl font-sports mb-8">NEWSLETTER</h4>
+                    <p class="text-slate-500 mb-6">Stay updated on tournaments and special offers.</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary">
+                        <button class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-blue-700 transition-colors">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center text-slate-400 text-sm">
+                <p>© 2026 WifflePro Facility. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                    <a href="#" class="hover:text-white">Facility Rules</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
