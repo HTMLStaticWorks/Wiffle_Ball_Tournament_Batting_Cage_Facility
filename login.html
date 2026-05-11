@@ -40,12 +40,19 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="font-body transition-colors duration-300 min-h-screen flex flex-col">
-
-
-
-
-
+<body class="font-body transition-colors duration-300 min-h-screen flex flex-col">    <!-- Minimal Header with Toggles -->
+    <header class="fixed w-full z-50 pointer-events-none">
+        <div class="container mx-auto px-4 h-24 flex items-center justify-end pointer-events-auto">
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                    <i data-lucide="moon" class="w-4 h-4 text-white"></i>
+                </button>
+                <button id="rtl-toggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                    <span class="text-[10px] font-bold text-white uppercase">RTL</span>
+                </button>
+            </div>
+        </div>
+    </header>
     <!-- Auth Background -->
     <div class="fixed inset-0 z-0">
         <img src="assets/images/auth_bg.png" class="w-full h-full object-cover grayscale brightness-50"
